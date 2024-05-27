@@ -21,13 +21,13 @@ programa
 			limpar()
 			desenhar()
 			controle()
+			g.limpar()
 		}
 	}
 	funcao limpar(){
 		g.definir_cor(-16711936)
 		g.desenhar_retangulo(400, 150, 1000, 920, verdadeiro, verdadeiro)
 		g.renderizar()
-		g.limpar()
 	}
 	funcao desenhar(){
 		g.definir_cor(g.COR_BRANCO)
@@ -53,7 +53,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 630; 
+ * @POSICAO-CURSOR = 589; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
