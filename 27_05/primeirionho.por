@@ -2,6 +2,7 @@ programa
 {
 	inclua biblioteca Graficos-->g
 	inclua biblioteca Teclado-->tec
+	inclua biblioteca Mouse-->m
 	inteiro largura
 	inteiro altura
 	inteiro x=100
@@ -18,20 +19,24 @@ programa
 		g.definir_dimensoes_janela(largura, altura)
 		g.definir_titulo_janela("joia")
 		enquanto(verdadeiro){
+			outras_tec()
 			limpar()
-			desenhar()
 			controle()
-			g.limpar()
+			desenhar()
+			desenhar1()
 		}
 	}
 	funcao limpar(){
-		g.definir_cor(-16711936)
-		g.desenhar_retangulo(400, 150, 1000, 920, verdadeiro, verdadeiro)
 		g.renderizar()
+		g.limpar()
 	}
 	funcao desenhar(){
-		g.definir_cor(g.COR_BRANCO)
+		g.definir_cor(g.COR_PRETO)
 		g.desenhar_ponto(x, y)
+	}
+	funcao desenhar1(){
+		g.definir_cor(g.COR_AZUL)
+		g.desenhar_retangulo(x, y, 120, 120, falso, verdadeiro)
 	}
 	funcao controle(){
 			se(tec.tecla_pressionada(87)){
@@ -47,13 +52,18 @@ programa
 				x++
 			}
 	}
+	funcao outras_tec(){
+		se(tec.tecla_pressionada(tec.TECLA_ESC)){
+			g.encerrar_modo_grafico()
+		}
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 589; 
+ * @POSICAO-CURSOR = 1068; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
